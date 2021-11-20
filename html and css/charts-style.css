@@ -1,0 +1,397 @@
+/* language */
+.chart {
+    width: 100%;
+    height: 250px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    font-size: 14px;
+}
+
+.chart div {
+    display: flex;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    align-items: center; 
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 15px;  
+}
+
+.filipino {
+    background-color: chocolate;
+    width: 43%;
+}
+.english {
+    background-color: cornflowerblue;
+    width: 40%;
+}
+
+.malay {
+    background-color: crimson;
+    width: 13%;
+}
+.other1 {
+    background-color: darkolivegreen;
+    width: 4%;
+}
+.chart div:hover {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.chart div::after {
+    content: attr(data-hover);
+    margin: auto;
+    text-align: center;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+.chart div:hover::after {
+    font-size: 20px;
+    opacity: 1;
+    width: auto;
+    visibility: visible;  
+}
+
+/* language text */
+
+.chart-language {
+    width: 100%;
+    display: flex;
+    justify-content:space-between; 
+    flex-wrap: wrap;
+    margin: 1em 0 1em 0 ;
+}
+
+.language {
+    padding-right: 10px;
+}
+
+.language-filipino,
+.language-english,
+.language-malay,
+.language-other1  {
+    display: flex;
+    padding: 5px;
+}
+
+.language-filipino div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-fil {
+    background-color: chocolate;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+.language-english div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-eng {
+    background-color: cornflowerblue;
+    padding: 1rem;
+    border-radius: 100%;   
+}
+
+.language-malay div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-mal {
+    background-color: crimson;
+    padding: 1rem; 
+    border-radius: 100%;  
+}
+
+.language-other1 div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-other1 {
+    background-color: darkolivegreen;
+    padding: 1rem;
+    border-radius: 100%;   
+}
+
+/* country */
+
+.chart2 {
+    width: 100%;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chart2 div {
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    height: 100%;
+    margin-top: 15px;
+    flex: 1;
+    overflow: hidden;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 15px;
+}
+
+.philippines {
+    background-color: darkred;
+    width: 55%;
+}
+.malaysia {
+    background-color: rgb(160, 15, 104);
+    width: 13%;
+}
+.usa {
+    background-color: darkslateblue;
+    width: 18%;
+}
+.canada {
+    background-color: rgb(194, 112, 80);
+    width: 10%;
+}
+.korea {
+    background-color: darkorchid;
+    width: 2%;
+}
+.other2{
+    background-color: darkslategrey;
+    width: 2%;
+}
+
+.chart2 div:hover {
+    width: 100%;
+    opacity: 1;
+}
+
+.chart2 div::after {
+    content: attr(data-country);
+    margin: auto;
+    text-align: center;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+.chart2 div:hover::after {
+    font-size: 20px;
+    opacity: 1;
+    width: auto;
+    visibility: visible;  
+}
+
+/* country text */
+
+.chart-country {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin: 1em 0 1em 0;
+}
+
+.country {
+    padding-right: 0px;
+}
+
+.country-philippines,
+.country-malaysia,
+.country-usa,
+.country-canada,
+.country-korea,
+.country-other2 {
+    display: flex;
+    padding: 5px;
+}
+
+.country-philippines div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-phil {
+    background-color: darkred;
+    padding: 1rem;
+    border-radius: 100%;   
+}
+
+.country-malaysia div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-malay {
+    background-color: rgb(160, 15, 104);
+    padding: 1rem;
+    border-radius: 100%;  
+}
+
+.country-usa div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-usa {
+    background-color: darkslateblue;
+    padding: 1rem;  
+    border-radius: 100%; 
+}
+
+.country-canada div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-canada {
+    background-color: rgb(194, 112, 80);
+    padding: 1rem;
+    border-radius: 100%;   
+}
+.country-korea div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-korea {
+    background-color: darkorchid;
+    padding: 1rem;  
+    border-radius: 100%; 
+}
+
+.country-other2 div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-other2 {
+    background-color: darkslategrey;
+    padding: 1rem;  
+    border-radius: 100%; 
+}
+
+/* date */
+
+.chart3 {
+    width: 100%;
+    height: 250px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.chart3 div {
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    margin-top: 5px;
+    flex: 1;
+    overflow: hidden;
+    font-size: 20px;
+    align-items: center;
+}
+
+.oldest {
+    background-color: coral;
+    width: 100%;
+    margin-right: 10px;
+}
+.newest {
+    background-color: darkgoldenrod;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.chart3 div:hover {
+    flex: 3;
+    opacity: 1;
+}
+
+.chart3 div::after {
+    content: attr(data-date);
+    margin: auto;
+    text-align: center;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+.chart3 div:hover::after {
+    opacity: 1;
+    width: auto;
+    visibility: visible;  
+}
+
+/* date text */
+
+.chart-date {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0 1em 0;
+}
+
+.date {
+    padding-right: 10px;
+}
+
+.date-oldest,
+.date-newest
+ {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.date-oldest div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-oldest{
+    background-color: coral;
+    padding: 2rem;
+    border-radius: 100%;
+}
+
+.date-newest div {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.color-newest {
+    background-color: darkgoldenrod;
+    padding: 2rem;
+    border-radius: 100%;   
+}
+
+
+
+
