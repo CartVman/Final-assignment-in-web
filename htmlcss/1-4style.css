@@ -1,21 +1,39 @@
-h1{
-    text-align: center;
-}
-
-body {
+/* Main */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+h1{
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
-/* Main */
+a {
+text-decoration: none;
+color: black;
+}
+
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-size: 16px;
+}
+
+.p-introduction {
+  margin-left: 1%;
+  font-style: italic;
+}
+
 .main-photo {
   margin: 0;
-  background-color: rgb(43, 16, 16);
   background-position: center;
   background-image: url("/pics/students.png"); 
   background-size: cover;
@@ -37,36 +55,100 @@ a {
 
 /* Menu code courtesy of https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox */
 
+/*
+.picture-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* Header */
+.text {
+  font-size: 20px;
+  padding-right: 20px;
+}
+*/
 
-#header{
-    background-color:rgb(248, 115, 6);
-    display: flex;
-    padding: 20px 50px;
-    justify-content: space-between;
-  }
-
-.list{
-    display: flex ;
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  
-.list > li {
-    padding-left: 50px;
+.image{
+  content: url("../htmlcss/images/smile.jpg");
+  height: 200px;
+  width: 200px;
+  margin-bottom: 5%;
 }
 
 
-  
-li a:hover, .menu:hover .dropbtn {
-    color: black;
-    background-color:lightgray;
-    border-radius: 20px;
+
+/* Header */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }
   
   /* Footer */
@@ -80,10 +162,23 @@ li a:hover, .menu:hover .dropbtn {
   padding: 20px 50px;
 }
 
-.footer-child a{
-  text-decoration: none;
-  color: black;
+@media screen and (max-width: 1250px) {
+  body {
+    font-size: 16px;
+  }
+
+  .list {
+    font-size: 20px;
+  }
 }
+
+@media screen and (max-width: 1100px) {
+  body {
+    font-size: 16px;
+  }
+
+}
+
 
 
   /*(HUSK Å FORANDRE ABSOLUTT ALT DET OVER OG KREDITERE OBLIG 1)*/
@@ -92,25 +187,16 @@ li a:hover, .menu:hover .dropbtn {
     OsloMet, DATA1200-1 21H Webutvikling og inkluderende design, Assignments, Oblig 1: Simple page */
 
     /*
-    *{
-      box-sizing: border-box;
-      text-decoration: none;
-  }
+
   
-  body {
-      max-width: 599px;
-      background-color: lightgoldenrodyellow;  
-      font-family: monospace;
-  }
-  
-  header {
+header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 90%;
       background-color: whitesmoke;
       margin: auto;
-  }
+}
   
   main {
       width: 90%;
