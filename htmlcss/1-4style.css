@@ -2,6 +2,16 @@ h1{
     text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Main */
 .main-photo {
   margin: 0;
@@ -13,103 +23,68 @@ h1{
   height: 90vh;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  background-color: transparent;
+  margin: 10px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Menu code courtesy of https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox */
+
+
 /* Header */
 
 #header{
     background-color:rgb(248, 115, 6);
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'helvetica', Courier, monospace;
-    font-weight: bold;
-  } 
-  
-  #header > a{
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+  }
+
+.list{
+    display: flex ;
     text-decoration: none;
-    margin: 0 20px;
-    padding: 10px;
+    list-style: none;
     color: black;
     font-weight: bold;
     font-size: 20px;
-    vertical-align: middle;
-    font-family: ReggaeOne;
-    display: inline-block;
   }
+
   
-  nav {
-    float: center;
-    font-size: 20px;
-  }
+.list > li {
+    padding-left: 50px;
+}
+
+
   
-  #header ul > li {
-    display: inline-block;
-    padding: 0 20px;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background:maroon;
-    border-radius: 5px;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  li a, .dropbtn {
-    display: inline-block;
-    padding: 14px 16px;
-    text-align: center;
-    color: black;
-    text-decoration: none;
-  }
-  
-  li a:hover, .menu:hover .dropbtn {
+li a:hover, .menu:hover .dropbtn {
     color: black;
     background-color:lightgray;
     border-radius: 20px;
-  }
+}
   
   /* Footer */
 
 .footer-content{
-  font-family: 'Helvetica', Courier, monospace;
   text-align:center;
   background-color: rgb(248, 115, 6);
   color: black;
-}
-
-.footer-child {
-  display: inline-block;
-  padding: 5px 80px;
-  font-size: 35px;  
-}
-
-.footer-child div{
-  font-size: 18px;
+  margin-top: 1.3%;
+  font-size: 24px;
+  padding: 20px 50px;
 }
 
 .footer-child a{
   text-decoration: none;
   color: black;
-  font-family: ReggaeOne;
 }
 
-hr{
-  height: 1px;
-  background-color: white;
-  border:none;
-}
-
-.footer-child > a > img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.footer-child > a > img:hover{
-  background: lightgray;
-}
 
   /*(HUSK Å FORANDRE ABSOLUTT ALT DET OVER OG KREDITERE OBLIG 1)*/
   /* The code over is reused from our earlier assignment (Oblig 1 in Web, Group 56), 
