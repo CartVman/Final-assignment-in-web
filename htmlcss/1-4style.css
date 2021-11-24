@@ -20,7 +20,6 @@ color: black;
 
 p{
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 body {
@@ -79,76 +78,31 @@ body {
 
 /* Header */
 
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
+#header {
+    background-color:rgb(248, 115, 6);
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 24px;
+  }
+
+.list {
+    margin: 0;
+    display: flex ;
+    color: black;    
 }
 
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
+.list li {
+  padding: 15px;
+  margin-left: 20px;
+  margin-right: 0;
 }
-
-.header .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: .2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
+ 
+.list li:hover {
+    color: black;
+    background-color:lightgray;
+    border-radius: 20px;
 }
   
   /* Footer */
@@ -172,11 +126,22 @@ body {
   }
 }
 
-@media screen and (max-width: 1100px) {
-  body {
-    font-size: 16px;
-  }
 
+@media (max-width: 1100px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
 
 
