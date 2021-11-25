@@ -83,7 +83,7 @@ main {
 
 .background-container {
   background-color: lightgrey;
-  border-radius: 1%;
+  border-radius: 0%;
 }
 
 .flex-container {
