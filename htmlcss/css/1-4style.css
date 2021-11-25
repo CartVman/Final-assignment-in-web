@@ -15,7 +15,7 @@ h1{
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 p{
@@ -38,7 +38,7 @@ body {
   bottom: 20px;
   right: 10px;
   z-index: 3;
-  background-color: black;
+  background-color: maroon;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -136,14 +136,14 @@ nav input {
 }
 
 .menu a:hover { 
-  background-color: red;
+  background-color: rgb(211, 211, 98);
 }
 
   /* Footer */
 
 .footer-content{
   text-align:center;
-  background-color: red;
+  background-color: black;
   color: white;
   font-size: 24px;
   padding: 20px 50px;
