@@ -4,3 +4,10 @@
     width: 200px;
     margin-bottom: 5%;
   }
+
+  .background-container {
+    background-color: rgb(199, 176, 176);
+    border-radius: 0%;
+    margin: 0%;
+    overflow: auto;
+  }

@@ -81,11 +81,6 @@ main {
 
 /* nasiba */
 
-.background-container {
-  background-color: lightgrey;
-  border-radius: 0%;
-}
-
 .flex-container {
   display: flex;
 }

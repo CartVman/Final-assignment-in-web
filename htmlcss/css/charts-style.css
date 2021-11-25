@@ -88,7 +88,7 @@
 }
 
 .color-fil {
-    background-color: chocolate;
+    background-color: rgb(156, 78, 22);
     padding: 1rem;
     border-radius: 100%;
 }
@@ -100,7 +100,7 @@
 }
 
 .color-eng {
-    background-color: cornflowerblue;
+    background-color: rgb(66, 99, 160);
     padding: 1rem;
     border-radius: 100%;   
 }
@@ -266,7 +266,7 @@
 }
 
 .color-canada {
-    background-color: rgb(194, 112, 80);
+    background-color: rgb(148, 74, 44);
     padding: 1rem;
     border-radius: 100%;   
 }
