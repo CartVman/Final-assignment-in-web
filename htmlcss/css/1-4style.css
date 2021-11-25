@@ -94,13 +94,6 @@ main {
 
 /* Menu code courtesy of https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox */
 
-.image{
-  content: url("../htmlcss/images/smile.jpg");
-  height: 200px;
-  width: 200px;
-  margin-bottom: 5%;
-}
-
 /* Header */
 
 #header {
