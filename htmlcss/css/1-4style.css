@@ -107,6 +107,7 @@ main {
 
 .logo{
   padding-right: 55px;
+  color: #fff;
   font-size: 40px;
   font-style: oblique;
   font-weight: bolder;
@@ -143,7 +144,7 @@ nav input {
 .footer-content{
   text-align:center;
   background-color: black;
-  color: black;
+  color: white;
   font-size: 24px;
   padding: 20px 50px;
 }
