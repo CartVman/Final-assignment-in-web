@@ -74,37 +74,51 @@ body {
   margin-bottom: 5%;
 }
 
-
-
 /* Header */
 
 #header {
-    background-color:rgb(248, 115, 6);
-    display: flex;
-    padding: 20px 50px;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 24px;
-  }
-
-.list {
-    margin: 0;
-    display: flex ;
-    color: black;    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(248, 115, 6);  
+  font-size: 18px;
+  padding: 15px 20px ;
 }
 
-.list li {
-  padding: 15px;
-  margin-left: 20px;
-  margin-right: 0;
+#header a h1 {
+  padding-right: 90px;
 }
- 
-.list li:hover {
-    color: black;
-    background-color:lightgray;
-    border-radius: 20px;
+
+nav label, 
+nav input { 
+  display: none; 
 }
+
+.menu { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu a {
+  display: flex;   
+  background: rgb(248, 115, 6);
+  text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 10px;
+  margin-right: 30px;
+  opacity: 0.9;     
   
+}
+
+.menu a:hover { 
+  background-color: red;
+  opacity: 0.5;
+}
+
   /* Footer */
 
 .footer-content{
@@ -116,107 +130,70 @@ body {
   padding: 20px 50px;
 }
 
-@media screen and (max-width: 1250px) {
+/* desktop screen */
+@media screen and (max-width: 1360px) {
   body {
     font-size: 16px;
   }
 
-  .list {
-    font-size: 20px;
+  #header {
+    font-size: 15px;
   }
 }
 
+/* mobile */
 
-@media (max-width: 1100px) {
-  .header li {
-    float: left;
+@media screen and (max-width: 1190px) {
+  .menu a {
+    box-sizing: border-box;
+    padding: 20px;
   }
-  .header li a {
-    padding: 20px 30px;
+
+  nav label {
+      display: inline-block;
+      color: #fff;
+      background-color: #8a0000;
+      font-size: 2rem;
+      font-style: normal;
+      padding: 2px 12px 7px 12px;
   }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
+
+  nav label:hover {
+      background-color: orangered;
   }
-  .header .menu-icon {
-    display: none;
-  }
-}
 
-
-
-  /*(HUSK Å FORANDRE ABSOLUTT ALT DET OVER OG KREDITERE OBLIG 1)*/
-  /* The code over is reused from our earlier assignment (Oblig 1 in Web, Group 56), 
-    with some slight changes: 
-    OsloMet, DATA1200-1 21H Webutvikling og inkluderende design, Assignments, Oblig 1: Simple page */
-
-    /*
-
-  
-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      background-color: whitesmoke;
-      margin: auto;
-}
-  
-  main {
-      width: 90%;
-      margin: auto;
-  }
-  
-   dropdown navigation 
-    
-  .dropdown {
-      background: darkorange;
-      list-style: none;
-      margin-top: 5px;
-      padding-left: 0;    
-      visibility: hidden;
-      opacity: 0;
-      min-width: 5rem;
-      position: absolute;
-      transition: all 0.5s ease;
-      left: 0;
+  .menu {
       display: none;
+      position: absolute;
+      margin-top: 15px;
+      margin-right: -1%;
   }
-  
-  .dropdown-container {
-      position: relative;
+
+  nav input:checked ~ .menu {
+      display: block;
+      right: 0;
   }
-  
-  .dropdown-button,
-  .dropdown a {
-      color: black;
-      background: darkorange;
-      padding: 1rem;
-      display: flex;
-      border: none;
-      transition-duration: 0.5s;
-  }
-  
-  .dropdown-button:hover,
-  .dropdown-button:focus-within,
-  .dropdown a:hover,
-  .dropdown a:focus-within {
+
+  nav label:hover,
+  nav label:focus-within,
+  .menu a:hover,
+  .menu a:focus-within {
       background: red;
       cursor: pointer;
   }
   
-  .dropdown-button:focus-within,
-  .dropdown a:focus-within {
+  nav label:focus-within,
+  .menu a:focus-within {
       outline: none;
   }
-    
-  .dropdown-container:hover > .dropdown,
-  .dropdown-container:focus-within > .dropdown{
-      visibility: visible;
-      opacity: 1;
-      display: block
+}
+
+/* mobile screen */
+
+@media screen and (max-width: 600px) {
+    .menu {
+      margin-right: -2.7%;
   }
-  
-/*  
+}
+
     
